@@ -22,11 +22,13 @@ app.listen(port, () => {
 main().catch(err => console.log(err));
 
 async function main() {
+    let dbName = "todoListDB";
+
     // connecting to local db
-    await mongoose.connect('mongodb://localhost:27017/todoListDB');
+    // await mongoose.connect('mongodb://localhost:27017/todoListDB');
 
     // connecting to hosted db (MongoDB Atlas)
-    // await mongoose.connect('mongodb+srv://admin-deepak:<password>@cluster0.vekgroy.mongodb.net/?retryWrites=true&w=majority/todoListDB');
+    await mongoose.connect("mongodb+srv://" + process.env.MONGODB-ADMIN-USER + ":" + process.env.MONGODB-ADMIN-PASS + "@cluster0.vekgroy.mongodb.net/?retryWrites=true&w=majority/" + dbName);
 };
 
 /***********
