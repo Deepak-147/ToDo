@@ -28,7 +28,7 @@ async function main() {
     // await mongoose.connect('mongodb://localhost:27017/todoListDB');
 
     // connecting to hosted db (MongoDB Atlas)
-    await mongoose.connect("mongodb+srv://" + process.env.MONGODB-ADMIN-USER + ":" + process.env.MONGODB-ADMIN-PASS + "@cluster0.vekgroy.mongodb.net/?retryWrites=true&w=majority/" + dbName);
+    await mongoose.connect("mongodb+srv://" + process.env.MONGODB_ADMIN_USER + ":" + process.env.MONGODB_ADMIN_PASS + "@cluster0.vekgroy.mongodb.net/?retryWrites=true&w=majority/" + dbName);
 };
 
 /***********
