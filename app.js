@@ -7,9 +7,6 @@ const _ = require("lodash");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const items = [];
-const workItems = [];
-
 app.set('view engine', 'ejs'); // EJS templating
 
 app.use(bodyParser.urlencoded({extended: true}));
